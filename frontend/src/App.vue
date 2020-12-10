@@ -1,30 +1,37 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <div id="app">
+        <header-info/>
+        <router-view/>
+    </div>
 </template>
 
+<script>
+    import HeaderInfo from "./components/BaseHeader";
+
+    export default {
+        name: 'app',
+        components: {
+            HeaderInfo
+        },
+        methods: {
+
+        }
+    }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("assets/css/form.css");
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Jost", serif;
+  font-weight: normal;
 }
 
-#nav {
-  padding: 30px;
+body{
+  margin: 0;
+  padding: 0;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

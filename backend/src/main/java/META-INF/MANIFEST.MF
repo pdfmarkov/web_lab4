@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.itmo.lab4.backend.BackendApplication
+
